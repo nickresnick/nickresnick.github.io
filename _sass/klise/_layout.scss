@@ -202,15 +202,18 @@
   }
 
   .author-name {
-    font-size: 1.7em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.7em;
     margin-bottom: 2px;
+    font-weight: 100;
   }
 
   .author-bio {
+    font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
-    opacity: 0.9;
-    max-width: 393px;
+    max-width: 500px;
     line-height: 1.688;
+    font-size: 1.9em;
   }
 }
 
@@ -271,7 +274,7 @@
     color: $black;
     opacity: 0.8;
     font-weight: $bold-weight;
-    font-size: $small-font-size;
+    font-size: $medium-font-size;
   }
   a.footer_item {
     color: $black;
