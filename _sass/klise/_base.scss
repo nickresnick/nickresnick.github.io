@@ -30,7 +30,10 @@ body {
   overflow-x: hidden;
   position: relative;
   color: $text-base-color;
-  background-color: $white;
+  background-image: url("../img/elephant.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   font: $normal-weight #{$base-font-size}/#{$base-line-height} $sans-family;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
