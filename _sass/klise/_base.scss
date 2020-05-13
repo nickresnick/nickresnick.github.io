@@ -29,11 +29,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
-  color: $text-base-color;
-  background-image: url("../img/elephant.jpeg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   font: $normal-weight #{$base-font-size}/#{$base-line-height} $sans-family;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -43,6 +38,24 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   box-sizing: border-box;
+}
+
+body[data-mood='light'] {
+  color: $text-base-color;
+  background-color: $white;
+}
+
+body[data-animal="elephant"] {
+  background-image: url("../img/elephant.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body[data-animal="goat"] {
+  background-image: url("../img/goat.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 // Set `margin-bottom` to maintain vertical rhythm
@@ -128,14 +141,14 @@ ul {
     display: list-item;
     text-align: -webkit-match-parent;
   }
-  li::before {
-    content: "\03BB";
-    display: inline-block;
-    width: 1em;
-    position: relative;
-    margin-left: -1em;
-    font-weight: $bold-weight;
-  }
+  // li::before {
+  //   content: "\03BB";
+  //   display: inline-block;
+  //   width: 1em;
+  //   position: relative;
+  //   margin-left: -1em;
+  //   font-weight: $bold-weight;
+  // }
 }
 
 ol {
@@ -340,6 +353,141 @@ mark,
     tr,
     td {
       border: 0;
+    }
+  }
+}
+
+.posts-list {
+  margin: 50px 0;
+  width: 100%;
+  > li {
+    margin-bottom: 23px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken($white, 8.2353);
+    list-style: none;
+    &:last-child {
+      border: none;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    p {
+      color: darken($white, 40);
+    }
+    .date {
+      color: #399f62;
+      float: right;
+      display: inline-block;
+      font-size: 15px;
+      padding-top: 10px;
+      text-transform: uppercase;
+    }
+    .post-title {
+      display: inline-block;
+      max-width: 75%;
+      &:hover span {
+        border-bottom: 1px dotted $white;
+      }
+    }
+  }
+  .tags li > a {
+    color: lighten($black, 28%);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .posts-list {
+    margin-top: 80px;
+    > li {
+      .post-title {
+        max-width: 100%;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .date {
+        float: left;
+        display: block;
+        width: 100%;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  .inner-post {
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    p,
+    li {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    ul > li {
+      margin-bottom: 10px;
+    }
+  }
+  .date-highlight {
+    margin: 80px 0 40px;
+  }
+  .post-title-section {
+    .section-line {
+      display: none;
+    }
+    .section-title {
+      font-size: 40px;
+    }
+  }
+  .section-title {
+    font-size: 80px;
+  }
+  .projects-menu li {
+    width: 100% !important;
+    height: 50% !important;
+  }
+  .content {
+    padding: 20px
+  }
+}
+
+.tags {
+  margin-top: 20px;
+  > li {
+    display: inline-block;
+    background: darken($white, 5%);
+    padding: 7px 10px;
+    color: lighten($black, 28%);
+    font-size: 11px;
+    text-transform: uppercase;
+    > a {
+      color: $white;
+    }
+  }
+}
+
+body[data-animal="elephant"] {
+  .menu {
+    a#animal {
+      .elephant {
+        display: none;
+      }
+      .goat {
+        display: block;
+      }
+    }
+  }
+}
+
+body[data-animal="goat"] {
+  .menu {
+    a#animal {
+      .elephant {
+        display: block;
+      }
+      .goat {
+        display: none;
+      }
     }
   }
 }

@@ -1,9 +1,6 @@
-body[data-theme="dark"] {
+body[data-mood="dark"] {
   color: $dark-text-base-color;
-  background-image: url("../img/goat.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: $dark-black;
 
   .author-bio {
     color: $dark-white;
