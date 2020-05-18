@@ -212,32 +212,20 @@
     margin-bottom: 3em;
   }
 
-  .author-avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
-    user-select: none;
-    background-color: $black;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    -webkit-animation: 0.5s ease-in forwards fadein;
-    animation: 0.5s ease-in forwards fadein;
-    opacity: 1;
-  }
-
   .author-name {
     font-family: 'Montserrat', sans-serif;
     font-size: 4.7em;
     margin-bottom: 2px;
-    font-weight: 100;
+    font-weight: 700;
   }
 
   .author-bio {
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 600px;
     line-height: 1.688;
     font-size: 1.9em;
+    font-weight: 600;
   }
 }
 

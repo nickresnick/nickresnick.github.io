@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nick Resnick - Curriculum Vitae</title>
+
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="The Curriculum Vitae of Nick Resnick."/>
+<meta charset="UTF-8">
+
+<link type="text/css" rel="stylesheet" href="resume/style.css">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body id="top">
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		<div id="name">
+			<h1 class="quickFade delayTwo">Nick Resnick</h1>
+			<h2 class="quickFade delayThree">Data Scientist</h2>
+		</div>
+
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li>248.388.1686</li>
+				<li><a href="mailto:nick.resnick@gmail.com" target="_blank">nick.resnick@gmail.com</a></li>
+				<br>
+				<li><a href="http://nickresnick.github.io" target= "_blank">Personal Site</a> &#8226; <a href="https://www.linkedin.com/in/nickresnick/">LinkedIn</a> &#8226; <a href="https://github.com/nickresnick">Github</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="mainArea" class="quickFade delayFive">
+		<section>
+			<div class="sectionTitle">
+				<h1>Work Experience</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>Amperity (Acquired Custora in Nov 2019)</h2>
+					<h3>New York, NY</h3>
+					<div></div>
+					<p class="subWorkExperience">Data Scientist</p>
+					<p class="subDetails-right">November 2019 &mdash; Present</p>
+					<ul id="work">
+						<li>Built out the model training pipeline for a preditive Customer Lifetime Value model in Databricks using an ensemble of Spark MLlib models, improving MAE over legacy Custora models by 15%</li>
+						<li>Implemented a novel method for generating features/labels at multiple "split dates" and incorporating features based on those dates as a way for encoding seasonality and time-based trends, improving MAE by 20%</li>
+					</ul>
+				</article>
+
+				<article>
+					<h2>Custora (YC '11)</h2>
+					<h3>New York, NY</h3>
+					<div></div>
+					<p class="subWorkExperience">Data Scientist</p>
+					<p class="subDetails-right">Summer 2015, July 2016 &mdash; November 2019</p>
+					<ul id="work">
+						<li>Served as lead engineer on Event Propensity Modeling (EPM), an ML pipeline for predicting the likelihood of an alternative marketing actions (e.g. credit card signups), which is used by over 25 tenants in over 200 campaigns</li>
+						<li>Built the EPM infrastucture in Scala using Spark, including a time-series cross validation module for model selection that runs in production, allowing us to fit new event types with no additional manual interaction</li>
+						<li>Built out a basket of models in production for EPM that included Lomax and Gamma-Gamma survival models, as well as Logistic Regression and Random Forest classification models, for fitting a large array of underlying dynamics</li>
+						<li>To the best of my knowledge, first person to derive the partial gradients for a censored observation in a Gamma-Gamma model using an approximated <sub>3</sub>F<sub>2</sub> hypergeometric function, so that it could be optimized using L-BFGS</li>
+						<li>Reconstructed the architecture of our statistical layer by removing unnecessary Rails model dependencies so the stat DAG is generated once on deploy instead of on each API request, cutting web response time by as much as 80%</li>
+						<li>Created a system for automatically refreshing our suite of models every two weeks and sending a stability report to internal stakeholders for approval, dramatically decreasing the level of effort of retraining models </li>
+						<li>Ported legacy product affinity (NNMF) and price sensitivity (K-means) models in R to Spark using the scala API, also building out serialization layer for sending multipart CSVs between Rails and Spark, improving performance by 20x</li>
+						<li>Constructed the statistics layer for computing campaign results using R, Ruby, and Presto, minimizing latency by intelligently caching often-used intermediate results, causing less than five bug tickets in over four years of use</li>
+						<li>Developed a recruiting and interview pipeline with the head of Data Science, growing our team by 50%</li>
+					</ul>
+				</article>
+
+				<article>
+					<h2>Under Armour</h2>
+					<h3>Baltimore, MD</h3>
+					<div></div>
+					<p class="subWorkExperience">Consumer Insights Intern</p>
+					<p class="subDetails-right">Summer 2014</p>
+					<ul id="work">
+						<li>Extracted and analyzed market data from market research distributors for 16 internal UA teams, synthesizing key insights to effectively communicate go-to-market strategies and competitive landscapes </li>
+						<li>Conducted deep dive on UA’s current market data subscriptions by interviewing 38 internal stakeholders and comparing 3 year-plan revenue projections, identifying 5 underserved teams for increased data spend </li>
+						<li>Presented deep dive analysis and recommendations to directors of Consumer Insights and Strategy stressing importance of data in achieving long-term goals, materializing increase of 33% in data spend </li>
+					</ul>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Skills</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<ul id="notwork">
+						<li><b>Languages/Frameworks: </b>Python, R, Scala, Ruby, SQL, Spark, Presto</li>
+					</ul>
+			  </article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Education</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>University of Michigan</h2>
+					<h3>Ann Arbor, MI </h3>
+					<div></div>
+					<p class="subDetails">GPA: 4.0/4.0 | James B. Angell Scholar (8 straight semesters of all As)</p>
+					<p class="subDetails-right">May 2016</p>
+					<ul id="notwork">
+						<li>B.A. in Mathematics, College of Literature, Science, and the Arts</li>
+						<li>B.B.A. with focus in marketing analytics, Ross School of Business</li>
+						<li>Selected courses: EECS 545 (Machine Learning), MKT 897 (Quant Seminar), MKT 899 (Quant Special Topics) </li>
+					</ul>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Additional</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<ul id="notwork">
+						<li>Worked remotely in seven countries as part of the Remote Year program, Fall 2019 - Spring 2020</li>
+						<li>Worked as an on-court photographer for the Detroit Pistons during the 2009 - 2010 season (we were really bad)</li>
+						<li>Avid snowboarder, longboarder, runner, aspiring comedian, and math nerd</li>
+					</ul>
+				</article>
+			</div>
+			<div class="clear"></div>
+		</section>
+	</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3753241-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
