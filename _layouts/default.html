@@ -3,6 +3,7 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
+<body data-mood="{{ site.mode }}" data-animal="{{ site.animal }}">
 {% include header.html %}
 <div class="navbar" role="navigation">
   <nav class="menu">
@@ -130,7 +131,7 @@ layout: compress
   </nav>
 </div>
 
-<body data-mood="{{ site.mode }}" data-animal="{{ site.animal }}">
+
   <div class="wrapper">
     {% include author.html %}
     <main aria-label="Content">
