@@ -4,7 +4,7 @@
   const themeSwitch = document.getElementById("mood");
   const themeData = root.getAttribute("data-mood");
 
-  if (themeSwitch) {
+  if (true) {
     initTheme(localStorage.getItem("theme"));
     themeSwitch.addEventListener("click", () =>
       toggleTheme(localStorage.getItem("theme"))
