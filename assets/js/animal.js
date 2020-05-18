@@ -28,7 +28,7 @@
       } else if (state === "elpehant") {
         document.body.setAttribute("data-animal", "elephant");
       } else {
-        localStorage.setItem("animal", "goat");
+        localStorage.setItem("animal", animalData);
       }
     }
   }
