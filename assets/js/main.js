@@ -28,7 +28,7 @@
       } else if (state === "light") {
         document.body.setAttribute("data-mood", "light");
       } else {
-        localStorage.setItem("theme", themeData);
+        localStorage.setItem("theme", "dark");
       }
     }
   }
