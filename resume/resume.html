@@ -7,7 +7,7 @@
 <meta name="description" content="The Curriculum Vitae of Nick Resnick."/>
 <meta charset="UTF-8">
 
-<link type="text/css" rel="stylesheet" href="resume/style.css">
+<link type="text/css" rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 </head>
@@ -44,8 +44,8 @@
 					<p class="subWorkExperience">Data Scientist</p>
 					<p class="subDetails-right">November 2019 &mdash; Present</p>
 					<ul id="work">
-						<li>Built out the model training pipeline for a preditive Customer Lifetime Value model in Databricks using an ensemble of Spark MLlib models, improving MAE over legacy Custora models by 15%</li>
-						<li>Implemented a novel method for generating features/labels at multiple "split dates" and incorporating features based on those dates as a way for encoding seasonality and time-based trends, improving MAE by 20%</li>
+						<li>Built out model training pipeline for predicting Customer Lifetime Value using ensemble of Spark MLlib regression models and expansive feature generation queries in Spark SQL, improving MAE over legacy Custora models by 15%</li>
+						<li>Implemented a method for incorporating seasonality into a regression model by generating features and labels at multiple dates and adding features that encode seasonality and other time-based trends, improving MAE by 20%</li>
 					</ul>
 				</article>
 
@@ -60,10 +60,10 @@
 						<li>Built the EPM infrastucture in Scala using Spark, including a time-series cross validation module for model selection that runs in production, allowing us to fit new event types with no additional manual interaction</li>
 						<li>Built out a basket of models in production for EPM that included Lomax and Gamma-Gamma survival models, as well as Logistic Regression and Random Forest classification models, for fitting a large array of underlying dynamics</li>
 						<li>To the best of my knowledge, first person to derive the partial gradients for a censored observation in a Gamma-Gamma model using an approximated <sub>3</sub>F<sub>2</sub> hypergeometric function, so that it could be optimized using L-BFGS</li>
-						<li>Reconstructed the architecture of our statistical layer by removing unnecessary Rails model dependencies so the stat DAG is generated once on deploy instead of on each API request, cutting web response time by as much as 80%</li>
-						<li>Created a system for automatically refreshing our suite of models every two weeks and sending a stability report to internal stakeholders for approval, dramatically decreasing the level of effort of retraining models </li>
+						<!-- <li>Reconstructed the architecture of our statistical layer by removing unnecessary Rails model dependencies so the stat DAG is generated once on deploy instead of on each API request, cutting web response time by as much as 80%</li> -->
+						<li>Created a system for automatically refreshing our suite of models every two weeks and sending a stability report to internal stakeholders for approval, dramatically decreasing the level of effort of retraining models</li>
 						<li>Ported legacy product affinity (NNMF) and price sensitivity (K-means) models in R to Spark using the scala API, also building out serialization layer for sending multipart CSVs between Rails and Spark, improving performance by 20x</li>
-						<li>Constructed the statistics layer for computing campaign results using R, Ruby, and Presto, minimizing latency by intelligently caching often-used intermediate results, causing less than five bug tickets in over four years of use</li>
+						<li>Constructed the statistics layer for computing marketing campaign results using R, Ruby, and Presto, minimizing latency by caching often-used intermediate results, causing less than five bug tickets in over four years of use</li>
 						<li>Developed a recruiting and interview pipeline with the head of Data Science, growing our team by 50%</li>
 					</ul>
 				</article>
@@ -93,7 +93,7 @@
 			<div class="sectionContent">
 				<article>
 					<ul id="notwork">
-						<li><b>Languages/Frameworks: </b>Python, R, Scala, Ruby, SQL, Spark, Presto</li>
+						<li><b>Languages/Frameworks: </b>Python, R, Scala, Ruby, Clojure, SQL, Spark, Presto</li>
 					</ul>
 			  </article>
 			</div>
@@ -132,7 +132,7 @@
 				<article>
 					<ul id="notwork">
 						<li>Worked remotely in seven countries as part of the Remote Year program, Fall 2019 - Spring 2020</li>
-						<li>Worked as an on-court photographer for the Detroit Pistons during the 2009 - 2010 season (we were really bad)</li>
+						<li>Worked as an on-court photographer for the Detroit Pistons during the 2009 - 2010 season</li>
 						<li>Avid snowboarder, longboarder, runner, aspiring comedian, and math nerd</li>
 					</ul>
 				</article>
