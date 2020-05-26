@@ -7,10 +7,6 @@ comments: true
 {% include header.html %}
   <body id="posts">
     <div class="main">
-      <a href="posts.html"  title="posts" class="posts-menu-icon"></a>
-      <a title="projects" class="projects-menu-icon">
-        <span></span>
-      </a>
       <div class="content">
         <ul class="posts-list">
         {% for post in site.posts %}
@@ -34,6 +30,4 @@ comments: true
         </ul>
       </div>
     </div>
-    {% include overlay.html %}
-    {% include scripts.html %}
   </body>
